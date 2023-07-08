@@ -2,6 +2,11 @@
 header{
     height:10vh;
 }
+
+body {
+    background-color: #292929;
+}
+
 nav {
     position: absolute;
     right: 0;

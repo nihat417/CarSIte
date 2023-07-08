@@ -1,0 +1,21 @@
+﻿@model List<Products>
+
+@{
+    foreach(var product in Model)
+    {
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Id  :@product.Id</li>
+                <li class="list-group-item">Name  :@product.Name</li>
+                <li class="list-group-item">Description  :@product.Description</li>
+                <li class="list-group-item">Price  :@product.price</li>
+                <li class="list-group-item">Quantity  :@product.quantity</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Buy</a>
+                <a href="#" class="card-link">Show All Information</a>
+            </div>
+        </div>     
+    }
+}

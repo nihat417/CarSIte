@@ -1,0 +1,22 @@
+﻿@model Car
+
+<div class="card mb-3 w-100 full">
+    <div class="row g-0">
+        <div class="col-md-4 mt-5">
+            <img src="@Model.photos" class="img-fluid rounded-start" alt="..." style="width: 100%;">
+        </div>
+        <div class="col-md-8 mt-5">
+            <div class="card-body d-flex flex-column h-100">
+                <ul class="list-group list-group-flush flex-grow-1">
+                    <li class="list-group-item">Make: <b>@Model.Make</li>
+                    <li class="list-group-item">Model: @Model.Model</li>
+                    <li class="list-group-item">Price: @Model.Price</li>
+                    <li class="list-group-item">Year: @Model.Year</li>
+                    <li class="list-group-item">Color: @Model.Color</li>
+                    <li class="list-group-item">Engine Size: @Model.EngineSize</li>
+                    <li class="list-group-item">Fuel Efficiency: @Model.FuelEfficiency</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

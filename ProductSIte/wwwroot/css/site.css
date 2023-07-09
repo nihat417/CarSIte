@@ -59,12 +59,19 @@ nav a {
 .card ul li{
     margin-left:initial;
 }
+#search-input{
+    display:flex;
+    margin:auto;
+}
+
+.full {
+    height: 100%;
+}
 
 @media only screen and (min-width: 770px) {
     ul {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
         margin-right: 50px;
     }
 
@@ -87,5 +94,18 @@ nav a {
 
     .mainpage{
         flex-direction:row;
+    }
+
+    #search-input{
+        justify-content:flex-start;
+        margin: 10px 0 10px 10px;
+    }
+
+    .headermenu{
+        display:flex;
+        justify-content:space-between;
+    }
+    .full{
+        height:86vh;
     }
 }

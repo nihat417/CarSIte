@@ -6,15 +6,23 @@
     @foreach(var car in Model)
     {
         <div class="card" style="width: 18rem;">
-            <img src="@car.photos" class="card-img-top" alt="...">
+            @if (string.IsNullOrEmpty(car.photos))
+            {
+                <img src="/Images/defaultcar.jpg" class="img-fluid rounded-start" alt="Default Photo">
+            }
+            else
+            {
+                <img src="@car.photos" class="img-fluid rounded-start" alt="...">
+            }
+
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Name  :@car.Make</li>
-                <li class="list-group-item">Price  :@car.Model</li>
+                <li class="list-group-item">Make  :@car.Make</li>
+                <li class="list-group-item">Model  :@car.Model</li>
                 <li class="list-group-item">Price  :@car.Price</li>
             </ul>
             <div class="card-body">
                 <a href="/Car/GetCars/@car.Id" class="card-link">Information</a>
-                <a href="#" class="card-link">Delete</a>
+                <a href="/Car/DeleteCar/@car.Id" class="card-link">Delete</a>
             </div>
         </div>     
     }

@@ -46,6 +46,9 @@ nav a {
     justify-content:center;
 }
 
+.fgwhite{color:#fff;}
+.mrgn{margin:20px;}
+
 .mainpage{
     display:flex;
     flex-direction:column;

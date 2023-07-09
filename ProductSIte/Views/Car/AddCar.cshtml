@@ -1,27 +1,29 @@
 ﻿@model Car
 
-
 <form asp-controller="Car" asp-action="AddCar" method="post">
-    <div class="mb-3">
-        <label for="Make" class="form-label">Make:</label>
+    <div class="mb-3 mrgn">
+        <label for="Make" class="form-label fgwhite">Id:</label>
+        <input class="form-control" asp-for="@Model.Id">
+
+        <label for="Make" class="form-label fgwhite">Make:</label>
         <input class="form-control"  asp-for="@Model.Make">
 
-        <label for="Make" class="form-label">Make:</label>
+        <label for="Make" class="form-label fgwhite">Model:</label>
         <input class="form-control"  asp-for="@Model.Model">
 
-        <label for="Make" class="form-label">Make:</label>
+        <label for="Make" class="form-label fgwhite">Price:</label>
         <input class="form-control" asp-for="@Model.Price">
 
-        <label for="Make" class="form-label">Make:</label>
+        <label for="Make" class="form-label fgwhite">Color:</label>
         <input class="form-control" asp-for="@Model.Color">
 
-        <label for="Make" class="form-label">Make:</label>
+        <label for="Make" class="form-label fgwhite">EngineSize:</label>
         <input class="form-control" asp-for="@Model.EngineSize">
 
-        <label for="Make" class="form-label">Make:</label>
+        <label for="Make" class="form-label fgwhite">FuelEfficiency:</label>
         <input class="form-control" asp-for="@Model.FuelEfficiency">
 
-        <label for="Make" class="form-label">Make:</label>
+        <label for="Make" class="form-label fgwhite">photo Url:</label>
         <input class="form-control" asp-for="@Model.photos">
        
     </div>

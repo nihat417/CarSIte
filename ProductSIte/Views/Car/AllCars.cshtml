@@ -1,0 +1,19 @@
+﻿@model List<Car>
+
+@{
+    foreach(var car in Model)
+    {
+        <div class="card" style="width: 18rem;">
+            <img src="@car.photos" class="card-img-top" alt="...">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Name  :@car.Make</li>
+                <li class="list-group-item">Price  :@car.Model</li>
+                <li class="list-group-item">Id  :@car.Price</li>
+            </ul>
+            <div class="card-body">
+                <a href="#" class="card-link">Buy</a>
+                <a href="#" class="card-link">Show All Information</a>
+            </div>
+        </div>     
+    }
+}

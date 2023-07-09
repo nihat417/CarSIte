@@ -1,7 +1,9 @@
 ﻿@model List<Car>
 
-@{
-    foreach(var car in Model)
+
+    <div class="mainpage">
+    
+    @foreach(var car in Model)
     {
         <div class="card" style="width: 18rem;">
             <img src="@car.photos" class="card-img-top" alt="...">
@@ -16,4 +18,4 @@
             </div>
         </div>     
     }
-}
+    </div>

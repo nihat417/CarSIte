@@ -49,6 +49,7 @@ nav a {
 .fgwhite{color:#fff;}
 .mrgn{margin:20px;}
 
+
 .mainpage{
     display:flex;
     flex-direction:column;
@@ -64,9 +65,13 @@ nav a {
 }
 #search-input{
     display:flex;
-    margin:auto;
+    justify-content:center;
+    
 }
-
+.searchbtn {
+    background:none;
+    border: none;
+}
 .full {
     height: 100%;
 }
@@ -110,5 +115,9 @@ nav a {
     }
     .full{
         height:86vh;
+    }
+
+    .mrgnleft {
+        margin-left: 10px;
     }
 }

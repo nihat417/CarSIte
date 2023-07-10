@@ -2,9 +2,9 @@
     <div class="headercontainer">
         <a id="logo" href="/Car/AllCars"><img src="~/Images/logo.png" alt="logo"></a>
         <div class="headermenu">
-            <form asp-controller="Car" asp-action="SearchCars" method="get">
+            <form id="search-input" asp-controller="Car" asp-action="SearchCars" method="get">
                 <input id="search-input" type="text" name="query" placeholder="Axtaris...">
-                <button type="submit">Search</button>
+                <button class="searchbtn mrgnleft" type="submit"><i class="fas fa-search"></i> 🔍</button>
             </form>
             <nav>
                 <ul>

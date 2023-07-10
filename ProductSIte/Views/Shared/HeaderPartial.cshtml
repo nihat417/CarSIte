@@ -1,9 +1,11 @@
 ﻿<header>
     <div class="headercontainer">
-
         <a id="logo" href="/Car/AllCars"><img src="~/Images/logo.png" alt="logo"></a>
         <div class="headermenu">
-            <input type="text" id="search-input">
+            <form asp-controller="Car" asp-action="SearchCars" method="get">
+                <input id="search-input" type="text" name="query" placeholder="Axtaris...">
+                <button type="submit">Search</button>
+            </form>
             <nav>
                 <ul>
                     <li><a aria-current="page" asp-controller="Car" asp-action="AllCars">Cars</a></li>

@@ -26,13 +26,13 @@ ul {
     flex-direction: column;
 }
 
-    ul li {
-        margin-left: 25px;
-        line-height: 70px;
-        transition: .5s linear;
-        display: flex;
-        justify-content: center;
-    }
+ul li {
+    margin-left: 25px;
+    line-height: 70px;
+    transition: .5s linear;
+    display: flex;
+    justify-content: center;
+}
 
 nav a {
     text-decoration: none;
@@ -83,10 +83,10 @@ nav a {
         margin-right: 50px;
     }
 
-        ul li {
-            height: 40px;
-            line-height: 40px;
-        }
+    ul li {
+        height: 40px;
+        line-height: 40px;
+    }
 
     nav li:hover {
         background: rgba(0,0,0,.1);

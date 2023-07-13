@@ -24,5 +24,6 @@ namespace CarSite.Models.ViewModels
 
         [Range(0.1, double.MaxValue, ErrorMessage = "FuelEfficiency must be a positive number")]
         public double FuelEfficiency { get; set; }
+        public string? photos { get; set; }
     }
 }

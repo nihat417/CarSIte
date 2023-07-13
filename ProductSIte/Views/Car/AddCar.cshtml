@@ -4,33 +4,34 @@
     <div class="mb-3 mrgn">
         <label for="Make" class="form-label fgwhite">Make:</label>
         <input class="form-control"  asp-for="@Model.Make">
-        <span class="fgwhite" asp-validation-for="@Model.Make"></span><br />
+        <span class="fgred" asp-validation-for="@Model.Make"></span><br />
 
         <label for="Model" class="form-label fgwhite">Model:</label>
         <input class="form-control"  asp-for="@Model.Model">
-        <span class="fgwhite" asp-validation-for="@Model.Model"></span><br />
+        <span class="fgred" asp-validation-for="@Model.Model"></span><br />
 
         <label for="Price" class="form-label fgwhite">Price:</label>
         <input class="form-control" asp-for="@Model.Price">
-        <span class="fgwhite" asp-validation-for="@Model.Price"></span><br />
+        <span class="fgred" asp-validation-for="@Model.Price"></span><br />
 
         <label for="Year" class="form-label fgwhite">Year:</label>
         <input class="form-control" asp-for="@Model.Year">
-        <span class="fgwhite" asp-validation-for="@Model.Year"></span><br />
+        <span class="fgred" asp-validation-for="@Model.Year"></span><br />
 
         <label for="Color" class="form-label fgwhite">Color:</label>
         <input class="form-control" asp-for="@Model.Color">
-        <span class="fgwhite" asp-validation-for="@Model.Color"></span><br />
+        <span class="fgred" asp-validation-for="@Model.Color"></span><br />
 
         <label for="EngineSize" class="form-label fgwhite">EngineSize:</label>
         <input class="form-control" asp-for="@Model.EngineSize">
-        <span class="fgwhite" asp-validation-for="@Model.EngineSize"></span><br />
+        <span class="fgred" asp-validation-for="@Model.EngineSize"></span><br />
 
         <label for="FuelEfficiency" class="form-label fgwhite">FuelEfficiency:</label>
         <input class="form-control" asp-for="@Model.FuelEfficiency">
-        <span class="fgwhite" asp-validation-for="@Model.FuelEfficiency"></span><br />
+        <span class="fgred" asp-validation-for="@Model.FuelEfficiency"></span><br />
 
         <label for="photo Url" class="form-label fgwhite">photo Url:</label>
+        <input class="form-control" asp-for="@Model.photos">
         
     </div>
     <button type="submit" class="btn btn-primary" value="Add">Submit</button>

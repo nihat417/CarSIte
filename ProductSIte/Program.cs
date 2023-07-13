@@ -1,7 +1,18 @@
+using AutoMapper;
+using CarSite.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddAutoMapper(typeof(Program).Assembly);
+
+var automapperservice = new MapperConfiguration(cfg =>
+{
+    cfg.AddProfile<MapperService>();
+});
+var mapper=automapperservice.CreateMapper();
+builder.Services.AddSingleton(mapper);
 
 var app = builder.Build();
 

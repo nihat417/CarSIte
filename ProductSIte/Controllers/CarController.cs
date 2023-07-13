@@ -1,4 +1,5 @@
-﻿using CarSite.Models.ViewModels;
+﻿using AutoMapper;
+using CarSite.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using ProductSIte.Models;
 
@@ -6,6 +7,14 @@ namespace ProductSIte.Controllers
 {
     public class CarController : Controller
     {
+        private static int _Id = 10;
+        private readonly IMapper _mapper;
+
+        public CarController(IMapper mapper)
+        {
+            _mapper = mapper;
+        }
+
         private static List<Car> cars = new()
         {
             new Car { Id = 0,Make = "Hyundai",Model = "Elantra",Price = 28000,Year = 2020,Color = "Silver",EngineSize = 1600,FuelEfficiency = 34.2,photos = "/Images/elantra.jpg"},
@@ -20,7 +29,7 @@ namespace ProductSIte.Controllers
             new Car { Id = 9,Make = "Mercedes-Benz",Model = "C-Class",Price = 45000,Year = 2020,Color = "White",EngineSize = 2500,FuelEfficiency = 26.8,photos = "/Images/mers.jpg"},
         };
 
-        private static int _Id=10;
+        
 
         [HttpGet]
         public IActionResult AddCar()
@@ -30,27 +39,15 @@ namespace ProductSIte.Controllers
 
         //[Route("Addcar")]
         [HttpPost]
-        public IActionResult AddCar(AddCarVM model)
+        public IActionResult AddCar(AddCarVM vm)
         {
             if(ModelState.IsValid)
             {
-                Car car = new()
-                {
-                    Id = _Id++,
-                    Make= model.Make,
-                    Model = model.Model,
-                    Price = model.Price,
-                    Year = model.Year,
-                    Color = model.Color,
-                    EngineSize = model.EngineSize,
-                    FuelEfficiency = model.FuelEfficiency,
-                    //photos = model.photos,
-                };
+                Car car=_mapper.Map<Car>(vm);
+                car.Id = _Id++;
                 cars.Add(car);
                 return RedirectToAction("AllCars");
             }
-            //car.Id = Id++;
-            //cars.Add(car);
             return View("Addcar");
         }
 

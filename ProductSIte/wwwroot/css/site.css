@@ -47,6 +47,7 @@ nav a {
 }
 
 .fgwhite{color:#fff;}
+.fgred{color:darkred;}
 .mrgn{margin:20px;}
 
 
@@ -120,4 +121,5 @@ nav a {
     .mrgnleft {
         margin-left: 10px;
     }
+
 }

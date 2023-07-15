@@ -1,20 +1,10 @@
 ﻿@model List<Car>
 
-
     <div class="mainpage">
-    
     @foreach(var car in Model)
     {
         <div class="card" style="width: 18rem;">
-            @if (string.IsNullOrEmpty(car.photos))
-            {
-                <img src="/Images/defaultcar.jpg" class="img-fluid rounded-start" alt="Default Photo">
-            }
-            else
-            {
-                <img src="@car.photos" class="img-fluid rounded-start" alt="...">
-            }
-
+            <img src="@((string.IsNullOrEmpty(car.photos)) ? "/Images/defaultcar.jpg" : car.photos)" class="img-fluid rounded-start" alt="Default Photo">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Make  :@car.Make</li>
                 <li class="list-group-item">Model  :@car.Model</li>

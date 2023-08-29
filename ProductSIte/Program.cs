@@ -1,5 +1,7 @@
 using AutoMapper;
+using CarSite.Persistence;
 using CarSite.Services;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +15,7 @@ var automapperservice = new MapperConfiguration(cfg =>
 });
 var mapper=automapperservice.CreateMapper();
 builder.Services.AddSingleton(mapper);
+builder.Services.AddDbContext<AppDbContext>(op => op.UseSqlServer(builder.Configuration.GetConnectionString("default")));
 
 var app = builder.Build();
 

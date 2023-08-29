@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarSite", "ProductSIte\CarSite.csproj", "{E570BD8C-BA86-4D72-8408-C52A634A9BCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarSite.Presentation", "ProductSIte\CarSite.Presentation.csproj", "{E570BD8C-BA86-4D72-8408-C52A634A9BCF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarSite.Persistence", "Persistence\CarSite.Persistence.csproj", "{1F2794ED-B508-4B3B-8CEF-164BE67CCD98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarSite.Domain", "CarSite.Domain\CarSite.Domain.csproj", "{5A692BBC-1AF6-4FF0-A52E-9D4E6A76DD92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{E570BD8C-BA86-4D72-8408-C52A634A9BCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E570BD8C-BA86-4D72-8408-C52A634A9BCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E570BD8C-BA86-4D72-8408-C52A634A9BCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F2794ED-B508-4B3B-8CEF-164BE67CCD98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F2794ED-B508-4B3B-8CEF-164BE67CCD98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F2794ED-B508-4B3B-8CEF-164BE67CCD98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F2794ED-B508-4B3B-8CEF-164BE67CCD98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A692BBC-1AF6-4FF0-A52E-9D4E6A76DD92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A692BBC-1AF6-4FF0-A52E-9D4E6A76DD92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A692BBC-1AF6-4FF0-A52E-9D4E6A76DD92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A692BBC-1AF6-4FF0-A52E-9D4E6A76DD92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

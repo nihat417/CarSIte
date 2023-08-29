@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
+using CarSite.Domain.Entities;
 using CarSite.Models.ViewModels;
-using ProductSIte.Models;
 
 namespace CarSite.Services
 {

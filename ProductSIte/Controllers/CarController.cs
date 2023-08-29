@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
+using CarSite.Application.ViewModels;
 using CarSite.Domain.Entities;
-using CarSite.Models.ViewModels;
 using CarSite.Persistence;
 using Microsoft.AspNetCore.Mvc;
 
@@ -34,30 +34,43 @@ namespace ProductSIte.Controllers
             return View("Addcar");
         }
 
-        //public IActionResult DeleteCar(int id)
-        //{
-        //    //cars.Remove(cars.FirstOrDefault(car=>car.Id == id));
-        //    return RedirectToAction("AllCars");
-        //}
+        public IActionResult DeleteCar(int id)
+        {
+            var car = context.cars.Find(id);
+            if(car != null)
+            {
+                context.cars.Remove(car);
+                context.SaveChanges();
+                return RedirectToAction("AllCars");
+            }
+            return NotFound();
+        }
 
-        //[HttpGet]
+        [HttpGet]
         public IActionResult AllCars()
         {
             return View(context.cars.ToList());
         }
 
-        //[HttpGet]
-        //public IActionResult GetCars(int id)
-        //{
-        //    return View();
-        //}
+        [HttpGet]
+        public IActionResult GetCars(int id)
+        {
+            var car=context.cars.Find(id);
+            if(car != null)
+            {
+                return View(car);
+            }
+            return NotFound();
+        }
 
         public IActionResult SearchCars(string query)
         {
             if (!string.IsNullOrEmpty(query))
             {
-                //List<Car> searchResults = cars.FindAll(car => car.Make == query);
-                return View();
+                var cars=context.cars.ToList();
+                var searchlist=cars.FindAll(c=>c.Make!.ToLower().Contains(query.ToLower()) ||
+                                            c.Model!.ToLower().Contains(query.ToLower()));                
+                return View(searchlist);
             }
 
             return RedirectToAction("AllCars");

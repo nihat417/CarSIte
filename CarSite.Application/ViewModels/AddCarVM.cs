@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CarSite.Models.ViewModels
+namespace CarSite.Application.ViewModels
 {
     public class AddCarVM
     {

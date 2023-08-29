@@ -1,6 +1,6 @@
 using AutoMapper;
+using CarSite.Application.Services;
 using CarSite.Persistence;
-using CarSite.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
